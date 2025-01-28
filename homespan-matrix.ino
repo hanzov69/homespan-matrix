@@ -10,7 +10,8 @@ void setup() {
   
   Serial.begin(115200);
   Matrix_Init();
-  homeSpan.begin(Category::Lighting,"LED Matrix");
+  homeSpan.begin(Category::Lighting,"LED Matrix Dev");
+  homeSpan.enableAutoStartAP();
   new SpanAccessory();                                                          
     new Service::AccessoryInformation();
       new Characteristic::Identify();            
